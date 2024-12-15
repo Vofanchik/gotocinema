@@ -1,0 +1,146 @@
+.conf-step__seances-hall {
+  position: relative;
+  margin: 35px;
+}
+
+.conf-step__seances-title {
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.conf-step__seances-timeline {
+  position: relative;
+  outline: 1px solid #848484;
+  padding: 10px 0;
+  margin-top: 21px;
+  height: 40px;
+  box-sizing: content-box;
+  width: 100%;
+}
+
+.conf-step__seances-movie {
+  position: absolute;
+  height: 40px;
+  padding: 10px 2px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px 1px #0000001a;
+  cursor: grab;
+  text-align: center;
+}
+
+.conf-step__seances-movie:hover {
+  z-index: 2;
+}
+
+.delete-button {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+  font-size: 18px;
+  line-height: 15px;
+  color: red;
+  text-align: center;
+  align-items: center;
+
+  background: #ffa1a1;
+  border: none;
+  border-radius: 50%;
+
+  transform: translate(50%, -50%);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.conf-step__seances-movie .conf-step__seances-movie-title {
+  overflow: hidden;
+  line-height: 10px;
+  height: 100%;
+}
+
+.conf-step__seances-movie .conf-step__seances-movie-start,
+.conf-step__seances-movie .conf-step__seances-movie-end {
+  position: absolute;
+  color: #848484;
+  font-size: 1.2rem;
+}
+
+.conf-step__seances-movie .conf-step__seances-movie-start {
+  bottom: -33px;
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.conf-step__seances-movie .conf-step__seances-movie-end {
+  top: -30px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.conf-step__seances-movie::before,
+.conf-step__seances-movie::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 5px;
+  background-color: #848484;
+}
+
+.conf-step__seances-movie::before {
+  bottom: -17px;
+  left: 0;
+}
+
+.conf-step__seances-movie::after {
+  top: -17px;
+  right: 0;
+}
+
+
+.calendar-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.thumbnail {
+  display: none;
+  position: fixed;
+  pointer-events: none;
+  width: 38px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+}
+
+
+@media (max-width: 700px) {
+  .conf-step__seances-movie .conf-step__seances-movie-start,
+  .conf-step__seances-movie .conf-step__seances-movie-end {
+    font-size: 0.8rem;
+  }
+
+  .conf-step__seances-hall {
+    margin: 35px 0px;
+  }
+
+  .conf-step__seances-timeline,
+  .conf-step__seances-movie {
+    height: 65px;
+  }
+
+  .conf-step__seances-movie {
+    padding: 1px;
+  }
+
+  .conf-step__seances-movie-title {
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+}

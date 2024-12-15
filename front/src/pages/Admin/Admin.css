@@ -1,0 +1,228 @@
+.conf-steps {
+  max-width: 972px;
+  width: 100%;
+  margin: 0 auto;
+  min-width: 320px;
+}
+
+
+.conf-step__paragraph {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.conf-step__paragraph:not(:first-of-type) {
+  margin-top: 35px;
+}
+
+.conf-step__list {
+  list-style: none;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 14px 0 5px 25px;
+}
+
+.conf-step__list li {
+  position: relative;
+}
+
+.conf-step__list li+li {
+  margin-top: 10px;
+}
+
+.conf-step__list li::before {
+  content: '–';
+  position: absolute;
+  left: -14px;
+}
+
+
+.conf-step__legend {
+  color: #848484;
+  font-size: 1.4rem;
+  margin-top: 25px;
+}
+
+.conf-step__legend .multiplier {
+  font-family: monospace;
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+.conf-step__label {
+  position: relative;
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #848484;
+}
+
+.conf-step__label-text {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  transform: translate(0, -100%);
+}
+
+.conf-step__label-fullsize {
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.conf-step__label-fullsize :last-of-type {
+  margin-bottom: 0;
+}
+
+.conf-step__label-fullsize .conf-step__input {
+  width: 100%;
+}
+
+.conf-step__label-fullsize .conf-step__input {
+  width: 100%;
+}
+
+.conf-step__input {
+  display: block;
+  width: 100px;
+  margin-top: 1px;
+  padding: 8px;
+  font-size: 1.6rem;
+  color: #000000;
+  border: 1px solid #b7b7b7;
+}
+
+.conf-step__input:focus {
+  outline: 1px #CF87FF solid;
+  outline-offset: -1px;
+}
+
+
+
+.conf-step__price-wrapper {
+  display: flex;
+  gap: 5px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.conf-step__chair-text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.conf-step__text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+
+.conf-step__hint {
+  margin-top: 10px;
+}
+
+
+.conf-step__chair {
+  display: inline-block;
+  vertical-align: middle;
+  width: 26px;
+  min-width: 8px;
+  height: 26px;
+  border-width: 2px;
+  border-style: solid;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.conf-step__chair_standart {
+  border-color: #393939;
+  background-color: #C4C4C4;
+}
+
+.conf-step__chair_vip {
+  border-color: #0a828a;
+  background-color: #b0d6d8;
+  background-image: url("../../../public/i/green-pattern.png");
+  background-repeat: repeat;
+}
+
+.conf-step__chair_disabled {
+  border-color: #C4C4C4;
+}
+
+
+.conf-step__hall {
+  position: relative;
+  padding: 62px 32px 34px;
+  border: 2px solid #000000;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.conf-step__hall::before {
+  content: ' экран';
+  position: absolute;
+  top: 24px;
+  left: 1.2em;
+  right: 0;
+  font-size: 1.6rem;
+  letter-spacing: 1.2em;
+  text-transform: uppercase;
+}
+
+.conf-step__hall .conf-step__chair {
+  cursor: pointer;
+}
+
+.conf-step__hall .conf-step__hall-wrapper {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.conf-step__hall .conf-step__hall-wrapper .conf-step__row {
+  display: flex;
+  gap: 10px;
+  font-size: 0;
+}
+
+.conf-step__hall .conf-step__hall-wrapper .conf-step__row+.conf-step__row {
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .conf-step__hall {
+    padding: 62px 12px 25px;
+  }
+}
+
+@media (max-width: 450px) {
+  .conf-step__hall {
+    border-left: none;
+    border-right: none;
+    padding: 62px 0 25px;
+  }
+
+  .conf-step__hall .conf-step__hall-wrapper .conf-step__row {
+    gap: 5px;
+  }
+}
+
+
+.conf-step__buttons {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+}
