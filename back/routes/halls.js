@@ -58,8 +58,7 @@ router.get('/halls/:id',  (req, res) => {
 router.post('/halls/:id/config', (req, res) => {
   const { id } = req.params;
   const { seats } = req.body;
-  const seats_str = JSON.stringify( [seats][0]);
-  
+  const seats_str = JSON.stringify( JSON.parse([seats][0]));
   try {
     db.run('UPDATE halls SET seats = ? WHERE id = ?', [seats_str, id]);
     res.sendStatus(200);
